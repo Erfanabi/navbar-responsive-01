@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Borel', cursive;
+}
+
+header {
+    background-color: #12101f;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.humberg {
+    display: none;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav-link ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-link ul li a {
+    margin: 0 5px;
+    padding: 8px 25px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.nav-link ul li a:hover {
+    background-color: #fff;
+    color: black !important;
+}
+
+.active {
+    background-color: #fff;
+    color: black !important;
+}
+
+.nav-link li a {
+    color: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .show-hide {
+        opacity: 1 !important;
+    }
+
+    .humberg {
+        display: block;
+    }
+
+    .humberg .line {
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        margin: 5px;
+    }
+
+    .nav-link {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #12101f;
+        padding: 10px;
+        opacity: 0;
+        overflow: hidden;
+        height: 0;
+
+        transition: all 0.3s linear;
+    }
+
+    .nav-link.show-hide{
+        height: 250px;
+    }
+
+    .nav-link ul {
+        text-align: center;
+        display: block;
+        /* opacity: 0; */
+    }
+
+    .nav-link ul li {
+        margin: 20px 0;
+    }
+}
