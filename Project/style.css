@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Borel', cursive;
+    overflow: hidden;
 }
 
 header {
@@ -59,8 +60,12 @@ header {
 
 @media only screen and (max-width: 900px) {
 
+    body {
+        overflow: hidden;
+    }
+
     .show-hide {
-        left: 0 !important;
+        transform: translateX(0%) !important;
     }
 
     .humberg {
@@ -72,19 +77,27 @@ header {
         height: 2px;
         background-color: #fff;
         margin: 5px;
+        transition: all 0.3s ease;
     }
 
     .nav-link {
         position: absolute;
         top: 80px;
-        left: -100%;
+        left: 0;
         right: 0;
         width: 100%;
         background-color: #2e2d2f;
         padding: 10px;
         overflow: hidden;
         height: 250px;
-        transition: left 0.3s;
+        opacity: 0;
+        transform: translateX(100%);
+
+        transition: all 0.5s ease;
+    }
+
+    .nav-link.show-hide {
+        opacity: 1 !important;
     }
 
     .nav-link ul {
@@ -100,4 +113,16 @@ header {
     .nav-link ul li {
         margin: 20px 0;
     }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 7px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-3px, -5px);
 }
