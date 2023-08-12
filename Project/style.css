@@ -60,7 +60,7 @@ header {
 @media only screen and (max-width: 900px) {
 
     .show-hide {
-        opacity: 1 !important;
+        left: 0 !important;
     }
 
     .humberg {
@@ -77,26 +77,24 @@ header {
     .nav-link {
         position: absolute;
         top: 80px;
-        left: 0;
+        left: -100%;
         right: 0;
         width: 100%;
-        background-color: #12101f;
+        background-color: #2e2d2f;
         padding: 10px;
-        opacity: 0;
         overflow: hidden;
-        height: 0;
-
-        transition: all 0.3s linear;
-    }
-
-    .nav-link.show-hide{
         height: 250px;
+        transition: left 0.3s;
     }
 
     .nav-link ul {
         text-align: center;
         display: block;
-        /* opacity: 0; */
+        opacity: 0;
+    }
+
+    .nav-link.show-hide ul {
+        opacity: 1;
     }
 
     .nav-link ul li {
